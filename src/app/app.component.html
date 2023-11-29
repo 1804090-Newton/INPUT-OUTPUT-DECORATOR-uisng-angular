@@ -1,0 +1,74 @@
+<!------<h1>List of Blog Post</h1>
+
+
+<div class="blog-post" *ngFor="let i of blogPosts">
+  <h3>{{i.Title}}</h3>
+  <p>{{i.Description}}</p>
+  <p>Author: {{i.Author}}</p>
+</div>
+
+<h1>{{title}}</h1>
+<input [(ngModel)]="email" type="text">
+<button (click)="onSave()">save</button>
+<p>{{email}}</p>
+
+<div class="container">
+  <h1>User List</h1>
+  <ul class="user-list">
+    <li [ngClass]="user.Active ? 'user-active' : 'user-inactive'" class="user-item" *ngFor="let user of users">
+      <img [src]="user.Image" alt="Newton">
+      <div class="user-details">
+        <span class="user-name">{{user.Name}}</span><br>
+        <span class="user-email">{{user.Email}}</span><br>
+        <span [ngStyle]="{color: user.Active ? 'green' : 'red'}" class="user-status">{{user.Active ? 'Active' : 'Inactive'}}</span><br>
+      </div>
+    </li>
+  </ul>
+</div>----->
+
+
+<!---<h1 *ngIf="blog">
+
+</h1>--->
+
+<!------- another-tutorial start-->
+<!-------
+<ng-template [ngIf]="blog">
+  <h1>List of Blog Post</h1>
+</ng-template>
+
+
+<div>
+  <span>By : {{blog?.Author?.Name}}</span>
+  <p>Title:{{blog.Title}}</p>
+</div>
+------>
+
+
+<div class="container">
+
+  <div class="title">
+    <h1>FLOWERS Post</h1>
+  </div>
+
+  <div class="blog-post">
+
+    <div *ngFor="let i of blogs">
+     <app-blog (onLikeEvent)=" onlikeCount($event)" [Newton]="i"></app-blog>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="title">
+    <h1>FRUITS Post</h1>
+  </div>
+
+  <div class="blog-post">
+
+    <div *ngFor="let j of featureBlogs">
+      <app-blog  (onLikeEvent)=" onlikeCount($event)" [Newton]="j"></app-blog>
+    </div>
+  </div>
+</div>

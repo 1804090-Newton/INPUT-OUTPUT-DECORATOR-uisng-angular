@@ -1,0 +1,12 @@
+<div class="column">
+    <div>
+      <img [src]="Newton.ImageUrl" alt="Blog Post image" class="Blog Post image">
+      <h2>{{Newton.Title}}</h2>
+      <p>{{Newton.Description}}</p>
+    </div>
+    <div class="icon-column">
+      <i (click)="onLike()" class="fa fa-thumbs-up"></i>
+      <i class="fa fa-comment"></i>
+      <i class="fa fa-star"></i>
+    </div>
+  </div>
