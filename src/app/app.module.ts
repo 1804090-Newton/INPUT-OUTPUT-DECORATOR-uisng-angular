@@ -3,12 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { BlogComponent } from './blog/blog.component';
+import { ChildComponent } from './child/child.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    BlogComponent,
+    ChildComponent,
+  
     
 
   ],
