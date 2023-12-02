@@ -1,12 +1,9 @@
-<div class="container">
- <input  (change)="loadCalender()" #calender type="date" ><br>
-  <!----- ami chacchi jokhon calender value ti set hobe
-        tokhon #input variable ti set hobe. 
-           eitar jonno amader change event lagbe.-->
- <label for="">value:</label>
- <input #input type="text"><br><br>
- <app-child></app-child>
- <app-child></app-child>
-
- <button (click)="add()">Add</button>
-</div> 
+<p>parent component</p>
+<input type="text" [(ngModel)]="text" name="" id="">
+<button (click)="toggle()">Show</button>
+<!--<app-child *ngIf="ischild"></app-child>-->
+<app-child [text]="text" *ngIf="ischild"></app-child>
+<!---[text] is the data binding where text is the variable of appcomponent
+    and [text] is the variable which is used childcomponent.ts without declaration data type.
+    the content of the text is directly copied to content of the [Text]. which can be used app-child component .
+-->
